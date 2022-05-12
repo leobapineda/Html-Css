@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-color: #ccc;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid;
+  padding: 1rem;
+}
+
+
+
+.main__curriculum-info {
+  display: flex;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__curriculum-title {
+  margin: 1rem;
+}
+
+.main__curriculum-info {
+  display: flex;
+  background-color: red;
+}
+
+.main__free {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
