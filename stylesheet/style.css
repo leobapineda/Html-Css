@@ -43,4 +43,18 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 2rem 15rem;
+  border: 1px solid;
+}
+
+form {
+  padding: 2rem 15rem;
+  border: 1px solid;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
 }
