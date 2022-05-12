@@ -5,7 +5,7 @@
   font-family: sans-serif;
 }
 
-.header__logo img{
+.header__logo img {
   width: 60%;
 }
 
@@ -16,18 +16,18 @@
   padding: 0.3rem 0.5rem;
 }
 
-.header__buttons button{
+.header__buttons button {
   background: none;
   padding: 0.5rem;
   width: 80px;
   margin: 0.5rem;
   border: none;
+  cursor: pointer;
 }
 
-.header__buttons.contact{
+.header__buttons.contact {
   background-color: rgb(0, 174, 255);
   border-radius: 1em;
-
 }
 
 .main__img-container {
@@ -50,10 +50,17 @@
   height: 100%;
 }
 
+.main__img-text button {
+  background-color: rgb(0, 174, 255);
+  border-radius: 2em;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+}
+
 .main__curriculum-info {
   display: flex;
   padding: 0 2rem;
-  
 }
 
 .main {
@@ -72,6 +79,7 @@
   align-items: center;
   gap: 10px;
   margin: 30px 10px;
+  font-size: 0.8rem;
 }
 
 .main__curriculum-info img {
@@ -96,7 +104,6 @@ section.main__free {
   width: 300px;
 }
 
-
 form {
   width: 100%;
   display: flex;
@@ -106,7 +113,7 @@ form {
   padding: 2rem 0;
 }
 
-.form__input{
+.form__input {
   width: 60%;
 }
 
@@ -118,8 +125,7 @@ form {
 
 .form__input > div > input,
 .form__input > div > textarea,
-.form__input .form__submit
-{
+.form__input .form__submit {
   min-width: 100%;
   padding: 0.5rem 0.5rem;
   outline: none;
@@ -139,4 +145,3 @@ form {
   background-color: rgb(0, 174, 255);
   padding: 0.5rem;
 }
-
