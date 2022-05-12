@@ -1,31 +1,18 @@
-body {
-  height: 200vh;
-}
-
 .parent {
+  column-width: 400px;
+  column-rule: 10px solid yellow;
+  column-count: 2;
+}
+
+.parent > p:nth-of-type(even) {
+  background: #ff0000;
+}
+
+.parent * {
+  margin: 10px;
   border: 1px solid;
-  width: 400px;
-  background-color: rgb(43, 192, 226);
-  padding: 1rem;
-  position: sticky;
-  top: 0;
 }
 
-.child {
-  border: 1px solid ;
-  height: 50px;
+.header {
+  column-span: all;
 }
-
-.child1 {
-  background-color: green;
-  
-}
-
-.child2 {
-  background-color: antiquewhite;
-}
-
-.child3 {
-  background-color: red;
-}
-
