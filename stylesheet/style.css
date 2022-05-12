@@ -30,8 +30,24 @@
 
 }
 
+.main__img-container {
+  position: relative;
+}
+
 .main__img-container img {
   max-width: 100%;
+}
+
+.main__img-text {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .main__curriculum-info {
