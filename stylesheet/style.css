@@ -66,6 +66,22 @@ section.main__free {
 form {
   border: 1px solid;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form__input{
+  width: 60%;
+  border: 1px solid;
+}
+
+.form__input > div > input,
+.form__input > div > textarea
+
+{
+  width: 100%;
 }
 
 .footer {
@@ -74,3 +90,4 @@ form {
   align-items: center;
   border: 1px solid;
 }
+
