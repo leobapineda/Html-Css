@@ -18,16 +18,16 @@
 
 .header__buttons button {
   background: none;
-  padding: 0.5rem;
+  padding: 0.6rem 0.5rem;
   width: 80px;
   margin: 0.5rem;
-  border: none;
+  border: 1px solid;
+  border-radius: 1em;
   cursor: pointer;
 }
 
-.header__buttons.contact {
+.header__buttons button:last-child {
   background-color: rgb(0, 174, 255);
-  border-radius: 1em;
 }
 
 .main__img-container {
@@ -56,22 +56,17 @@
   border: none;
   padding: 1rem;
   cursor: pointer;
+  margin: 1rem;
+}
+
+.main__curriculum-title {
+  margin: 1rem;
+  text-align: center;
 }
 
 .main__curriculum-info {
   display: flex;
   padding: 0 2rem;
-}
-
-.main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.main__curriculum-title {
-  margin: 1rem;
 }
 
 .main__curriculum-child > .main__curriculum-item {
@@ -83,14 +78,11 @@
 }
 
 .main__curriculum-info img {
-  width: 30px;
+  width: 20px;
 }
 
 section.main__free {
   background-color: rgb(0, 174, 255);
-
-  border: 1px solid;
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -100,12 +92,15 @@ section.main__free {
   color: white;
 }
 
+.main__free-title {
+  font-size: 3rem;
+}
+
 .main__free-text {
   width: 300px;
 }
 
 form {
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -141,7 +136,7 @@ form {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid;
   background-color: rgb(0, 174, 255);
   padding: 0.5rem;
+  color: white;
 }
