@@ -1,15 +1,18 @@
-const nav = document.querySelector(".nav");
+const button = document.querySelector('button')
+const buttonClass = document.querySelector('.button')
+let darkMode = true
 
-// save the current scroll value
-let lastScrollY = window.scrollY;
+button.addEventListener('click', () => {
+    if(darkMode) {
+        document.documentElement.style.setProperty('--lightest-slate', '#0a192f')
+        document.documentElement.style.setProperty('--navy-color', '#ccd6f6')
+        darkMode = false
+    } else {
+        document.documentElement.style.setProperty('--lightest-slate', '#ccd6f6')
+        document.documentElement.style.setProperty('--navy-color', '#0a192f')
+        darkMode = true
+    }
+    
+    console.log(darkMode);
+})
 
-window.addEventListener("scroll", () => {
- if(window.scrollY > 25) {
-  if (lastScrollY < window.scrollY) {
-    nav.classList.add("nav--hidden");
-  } else {
-    nav.classList.remove("nav--hidden");
-  }
-  lastScrollY = window.scrollY;
- }
-});
