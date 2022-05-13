@@ -1,10 +1,25 @@
+:root {
+  /* shadow es la misma, lo unico diferente es el color */
+  --white-text: white;
+  --initial-bg-lightness: 90%;
+  --bg-hue: 0;
+  --bg-saturation: 0%;
+  --bg-lightness: var(--initial-bg-lightness);
+  --border-lightness: calc(var(--initial-bg-lightness) - 20%);
+}
+
 * {
   box-sizing: border-box;
 }
 
 .button {
-  background-color: hsl(0, 0%, 90%);
-  border: 1px solid hsl(0, 0%, 70%);
+  background-color: hsl(
+    var(--bg-hue),
+    var(--bg-saturation),
+    var(--bg-lightness)
+  );
+  border: 1px solid
+    hsl(var(--bg-hue), var(--bg-saturation), var(--border-lightness));
   border-radius: 0.3em;
   cursor: pointer;
   padding: 0.5em 1em;
@@ -12,47 +27,33 @@
 
 .button:hover,
 .button:focus {
-  background-color: hsl(0, 0%, 80%);
-  box-shadow: 0 0 5px 0 hsl(0, 0%, 70%);
+  --bg-lightness: calc(var(--initial-bg-lightness) - 10%);
+  box-shadow: 0 0 5px 0
+    hsl(var(--bg-hue), var(--bg-saturation), var(--border-lightness));
 }
 
 /* primary button */
 .button.primary {
-  background-color: hsl(271, 70%, 50%);
-  border-color: hsl(271, 70%, 30%);
-  color: white;
-}
-
-.button.primary:hover,
-.primary:focus {
-  background-color: hsl(271, 70%, 40%);
-  box-shadow: 0 0 5px 0 hsl(271, 70%, 30%);
+  --bg-hue: 271;
+  --bg-saturation: 70%;
+  --bg-lightness: 50%;
+  color: var(--white-text);
 }
 
 /* accent button */
 .button.accent {
-  background-color: hsl(200, 100%, 40%);
-  border-color: hsl(200, 100%, 20%);
-  color: white;
-}
-
-.button.accent:hover,
-.accent:focus {
-  background-color: hsl(200, 100%, 30%);
-  box-shadow: 0 0 5px 0 hsl(200, 100%, 20%);
+  --bg-hue: 200;
+  --bg-saturation: 100%;
+  --bg-lightness: 40%;
+  color: var(--white-text);
 }
 
 /* danger button */
 .button.danger {
-  background-color: hsl(0, 60%, 50%);
-  border-color: hsl(0, 60%, 30%);
-  color: white;
-}
-
-.button.danger:hover,
-.danger:focus {
-  background-color: hsl(0, 60%, 40%);
-  box-shadow: 0 0 5px 0 hsl(0, 60%, 30%);
+  --bg-hue: 0;
+  --bg-saturation: 60%;
+  --bg-lightness: 50%;
+  color: var(--white-text);
 }
 
 .button.large {
@@ -70,7 +71,7 @@
 button.custom {
   background: linear-gradient(to right, hsl(0, 60%, 50%), hsl(200, 100%, 40%));
   border-color: #222;
-  color: white;
+  color: var(--white-text);
 }
 
 button.custom:hover,
