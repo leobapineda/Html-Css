@@ -1,82 +1,72 @@
-:root {
-  /* shadow es la misma, lo unico diferente es el color */
-  --white-text: white;
-  --initial-bg-lightness: 90%;
-  --bg-hue: 0;
-  --bg-saturation: 0%;
-  --bg-lightness: var(--initial-bg-lightness);
-  --border-lightness: calc(var(--initial-bg-lightness) - 20%);
-}
-
+/* 15 - Input Component Library Introduction */
 * {
   box-sizing: border-box;
+  outline: none;
 }
 
-.button {
-  background-color: hsl(
-    var(--bg-hue),
-    var(--bg-saturation),
-    var(--bg-lightness)
-  );
-  border: 1px solid
-    hsl(var(--bg-hue), var(--bg-saturation), var(--border-lightness));
-  border-radius: 0.3em;
-  cursor: pointer;
-  padding: 0.5em 1em;
+input {
+  margin: 0.2em;
+  padding: 0.4em;
+  border: 0.08rem solid gainsboro;
 }
 
-.button:hover,
-.button:focus {
-  --bg-lightness: calc(var(--initial-bg-lightness) - 10%);
-  box-shadow: 0 0 5px 0
-    hsl(var(--bg-hue), var(--bg-saturation), var(--border-lightness));
+/* default input */
+.default {
+  border-radius: 0.2em;
+  border-color: rgb(170, 170, 170);
 }
 
-/* primary button */
-.button.primary {
-  --bg-hue: 271;
-  --bg-saturation: 70%;
-  --bg-lightness: 50%;
-  color: var(--white-text);
+.default:focus {
+  outline: none;
+  box-shadow: 0 0 3px 1px rgb(170, 170, 170);
 }
 
-/* accent button */
-.button.accent {
-  --bg-hue: 200;
-  --bg-saturation: 100%;
-  --bg-lightness: 40%;
-  color: var(--white-text);
+/* success input */
+.success {
+  border-radius: 0.2em;
+  border-color: greenyellow;
 }
 
-/* danger button */
-.button.danger {
-  --bg-hue: 0;
-  --bg-saturation: 60%;
-  --bg-lightness: 50%;
-  color: var(--white-text);
+.success:focus {
+  outline: none;
+  box-shadow: 0 0 3px 1px greenyellow;
 }
 
-.button.large {
-  font-size: 1.25rem;
+/* error input */
+.error {
+  border-radius: 0.2em;
+  border-color: rgb(255, 47, 47);
 }
 
-.button.small {
-  font-size: 0.5rem;
+.error:focus {
+  outline: none;
+  box-shadow: 0 0 3px 1px rgb(255, 47, 47);
 }
 
-.button.pill {
-  border-radius: 1000000px;
+/* large input */
+.large {
+  border-radius: 0.2em;
+  border-color: rgb(47, 154, 255);
+  font-size: 1.5rem;
 }
 
-button.custom {
-  background: linear-gradient(to right, hsl(0, 60%, 50%), hsl(200, 100%, 40%));
-  border-color: #222;
-  color: var(--white-text);
+.large:focus {
+  outline: none;
+  box-shadow: 0 0 3px 1px rgb(47, 154, 255);
 }
 
-button.custom:hover,
-button.custom:focus {
-  background: linear-gradient(to right, hsl(0, 60%, 40%), hsl(200, 100%, 30%));
-  border-color: #222;
-  box-shadow: 0 0 5px 0 #222;
+/* small input */
+.small {
+  border-radius: 0.2em;
+  border-color: rgb(47, 154, 255);
+  font-size: 0.7rem;
+}
+
+.small:focus {
+  outline: none;
+  box-shadow: 0 0 3px 1px rgb(47, 154, 255);
+}
+
+.disabled:disabled {
+  background-color: #eaeaea;
 }
