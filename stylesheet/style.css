@@ -1,7 +1,6 @@
 /* 15 - Input Component Library Introduction */
 :root {
-  --border-color: #aaaaaa;
-  --border-focus-color: gainsboro;
+  --border-color: gainsboro;
 }
 
 * {
@@ -13,7 +12,7 @@ input {
   border-radius: 0.2em;
   margin: 0.2em;
   padding: 0.4em;
-  border: 0.08rem solid var(--border-focus-color);
+  border: 0.08rem solid var(--border-color);
 }
 
 input:focus {
@@ -26,21 +25,18 @@ input:focus {
 
 /* success input */
 .success {
-  --border-color: greenyellow;
-  --border-focus-color: greenyellow;
+  --border-color: #adff2f;
 }
 
 /* error input */
 .error {
   --border-color: #ff2f2f;
-  --border-focus-color: #ff2f2f;
 }
 
 /* large input */
 .large,
 .small {
   --border-color: #2f9aff;
-  --border-focus-color: #2f9aff;
   font-size: 1.5rem;
 }
 
