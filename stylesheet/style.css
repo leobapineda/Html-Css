@@ -1,17 +1,10 @@
 /* here in our project the root is the html */
-:root {
-  --lightest-slate: #ccd6f6;
-  --navy-color:  #0a192f;
-}
-
-body{
-  background-color: var(--navy-color);
-}
-
 h1 {
-  color: var(--lightest-slate);
+  margin: calc(10px + 10px); 
+  /* 20px */
 }
 
 p {
-  color: var(--lightest-slate);
+  --spacer: 10;
+margin-left: calc(var(--spacer) * 5px);
 }
