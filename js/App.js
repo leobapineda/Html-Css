@@ -1,18 +1,15 @@
-{
-  const nav = document.querySelector(".nav");
-  let lastScrollY = window.scrollY;
-  console.log(window.scrollY);
+const nav = document.querySelector(".nav");
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 30) {
-      if (lastScrollY < window.scrollY) {
-        nav.classList.add("nav--hidden");
-        console.log(window.scrollY);
-      } else {
-        nav.classList.remove("nav--hidden");
-      }
-    }
+// save the current scroll value
+let lastScrollY = window.scrollY;
 
-    lastScrollY = window.scrollY;
-  });
-}
+window.addEventListener("scroll", () => {
+ if(window.scrollY > 25) {
+  if (lastScrollY < window.scrollY) {
+    nav.classList.add("nav--hidden");
+  } else {
+    nav.classList.remove("nav--hidden");
+  }
+  lastScrollY = window.scrollY;
+ }
+});
