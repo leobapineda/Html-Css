@@ -1,10 +1,81 @@
-/* here in our project the root is the html */
-h1 {
-  margin: calc(10px + 10px); 
-  /* 20px */
+* {
+  box-sizing: border-box;
 }
 
-p {
-  --spacer: 10;
-margin-left: calc(var(--spacer) * 5px);
+.button {
+  background-color: hsl(0, 0%, 90%);
+  border: 1px solid hsl(0, 0%, 70%);
+  border-radius: 0.3em;
+  cursor: pointer;
+  padding: 0.5em 1em;
+}
+
+.button:hover,
+.button:focus {
+  background-color: hsl(0, 0%, 80%);
+  box-shadow: 0 0 5px 0 hsl(0, 0%, 70%);
+}
+
+/* primary button */
+.button.primary {
+  background-color: hsl(271, 70%, 50%);
+  border-color: hsl(271, 70%, 30%);
+  color: white;
+}
+
+.button.primary:hover,
+.primary:focus {
+  background-color: hsl(271, 70%, 40%);
+  box-shadow: 0 0 5px 0 hsl(271, 70%, 30%);
+}
+
+/* accent button */
+.button.accent {
+  background-color: hsl(200, 100%, 40%);
+  border-color: hsl(200, 100%, 20%);
+  color: white;
+}
+
+.button.accent:hover,
+.accent:focus {
+  background-color: hsl(200, 100%, 30%);
+  box-shadow: 0 0 5px 0 hsl(200, 100%, 20%);
+}
+
+/* danger button */
+.button.danger {
+  background-color: hsl(0, 60%, 50%);
+  border-color: hsl(0, 60%, 30%);
+  color: white;
+}
+
+.button.danger:hover,
+.danger:focus {
+  background-color: hsl(0, 60%, 40%);
+  box-shadow: 0 0 5px 0 hsl(0, 60%, 30%);
+}
+
+.button.large {
+  font-size: 1.25rem;
+}
+
+.button.small {
+  font-size: 0.5rem;
+}
+
+.button.pill {
+  border-radius: 1000000px;
+}
+
+button.custom {
+  background: linear-gradient(to right, hsl(0, 60%, 50%), hsl(200, 100%, 40%));
+  border-color: #222;
+  color: white;
+}
+
+button.custom:hover,
+button.custom:focus {
+  background: linear-gradient(to right, hsl(0, 60%, 40%), hsl(200, 100%, 30%));
+  border-color: #222;
+  box-shadow: 0 0 5px 0 #222;
 }
