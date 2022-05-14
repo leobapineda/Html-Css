@@ -28,3 +28,13 @@
 .custom-checkbox + label:hover::before {
   background-color: #ddd;
 }
+
+.custom-checkbox:disabled + label::before  {
+    background-color: #ccc;
+    border-color: #999;
+}
+
+.custom-checkbox:disabled + label{
+ color: #444;
+ cursor:not-allowed;
+}
