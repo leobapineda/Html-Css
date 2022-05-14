@@ -14,27 +14,41 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  font-size: 1.5rem;
 }
 
 .custom-checkbox + label::before {
   content: "";
-  min-width: 1em;
-  min-height: 1em;
+  width: 1em;
+  height: 1em;
   border: 0.1em solid black;
   border-radius: 0.2em;
   margin-right: 0.5em;
 }
 
 .custom-checkbox + label:hover::before {
-  background-color: #ddd;
+  background-color: #eee;
 }
 
-.custom-checkbox:disabled + label::before  {
-    background-color: #ccc;
-    border-color: #999;
+.custom-checkbox:disabled + label::before {
+  background-color: #ccc;
+  border-color: #999;
 }
 
-.custom-checkbox:disabled + label{
- color: #444;
- cursor:not-allowed;
+.custom-checkbox:focus + label::before {
+  box-shadow: 0 0 1px 0 black;
+}
+
+.custom-checkbox:checked + label::before {
+  content: '✔';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #24b6ff;
+  color: white;
+}
+
+.custom-checkbox:disabled + label {
+  color: #444;
+  cursor: not-allowed;
 }
