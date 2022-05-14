@@ -1,15 +1,10 @@
-.div1{
-  width: 200px;
-  height: 200px;
-  background-color: red;
-  opacity: 50%;
-  margin: 0 auto;
+div {
+  background-color: green;
+  margin: 1rem 0;
 }
 
-.div2{
-  height: 200px;
-  background-color: rgb(0, 26, 255);
-  opacity: 50%;
-  margin-top: -50px;
+@supports (background-color: revert) and (background-color: red) {
+  .div {
+    background-color: transparent;
+  }
 }
-
