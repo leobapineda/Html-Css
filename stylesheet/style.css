@@ -144,6 +144,36 @@ body {
   opacity: 0.7;
   z-index: 1;
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__tittle{
+  font-size: 1.5em;
+  margin-bottom: 0.2em;
+}
+
+.card__price {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 0.4em;
+}
+
+.card__price--small {
+  font-size: 1rem;
+}
+
+.card__list{
+  list-style: none;
+  margin: 0 0.5em;
+  padding: 0;
+  line-height: 1.5;
+}
+
+.card1 .card__list > li:nth-child(n+3){
+ text-decoration: line-through;
 }
 
 .card2 {
@@ -153,6 +183,10 @@ body {
   opacity: 1;
   z-index: 2;
 }
+
+.card2 .card__list > li:nth-child(n+5){
+  text-decoration: line-through;
+ }
 
 .form {
   max-width: 600px;
