@@ -1,0 +1,11 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.custom-checkbox {
+  opacity: 0;
+  position: absolute;
+  left: -99999px;
+}
