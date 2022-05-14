@@ -130,7 +130,6 @@ body {
   margin: 1rem 0;
   background-color: #0af;
   padding: 1.5rem 0;
-
 }
 
 .section-card {
@@ -150,11 +149,10 @@ body {
 .card2 {
   width: 230px;
   height: 310px;
-  margin: 0 -20px;
+  /* margin: 0 -20px; */
   opacity: 1;
   z-index: 2;
 }
-
 
 .form {
   max-width: 600px;
