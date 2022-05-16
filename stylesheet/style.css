@@ -3,11 +3,11 @@ div {
   width: 200px;
   height: 200px;
   color: white;
-  animation-name: color-change, size-change ;
+  animation-name: custom;
   animation-delay: 0.5;
   animation-direction: alternate;
   animation-iteration-count: infinite;
-  animation-duration: 1s;
+  animation-duration: 10s;
   animation-timing-function: linear;
 }
 
@@ -15,19 +15,29 @@ div:hover {
   animation-play-state: paused;
 }
 
-@keyframes color-change {
-  100% {
-    background-color: green;
-    color: black;
-  }
-}
-
-@keyframes size-change {
+@keyframes custom {
   from {
+    font-size: 1rem;
+    color: white;
+  }
+
+  25% {
+    font-size:3rem;
+    color: rgb(251, 255, 0);
+  }
+
+  50% {
+    font-size: 2.5rem;
+    color: green;
+  }
+
+  75% {
+    font-size: 1.5rem;
+    color: blue;
   }
 
   to {
-    width: 400px;
-    height: 400px;
+    font-size: 1rem;
+    color: rgb(255, 0, 242);
   }
 }
