@@ -1,43 +1,42 @@
-div {
-  background-color: red;
+.div {
+  --scale: 1.5;
+  text-align: right;
+  justify-content: end;
   width: 200px;
   height: 200px;
+  background-color: red;
   color: white;
   animation-name: custom;
   animation-delay: 0.5;
   animation-direction: alternate;
   animation-iteration-count: infinite;
-  animation-duration: 10s;
+  animation-duration: 1s;
   animation-timing-function: linear;
+  /* the first value is x and second one y */
+  /* transform: scale(1, 1); */
+  /* transform: rotate(170deg); */
+  /* transform: rotate(0.75turn); */
+  /* the first value is  from the x, the second from the y*/
+  /* transform: translate(100px, 200px); */
+  /* transform: translateX(100px) translateY(200px); */
+  /* we can use % to translate, but then the element will translate base on its own size, not the size of the parent*/
+  /* to translate it we can use %, px, rem, em */
+  /* transform: translate(100%); */
+
 }
 
-div:hover {
+.div:hover {
   animation-play-state: paused;
 }
 
 @keyframes custom {
   from {
-    font-size: 1rem;
-    color: white;
-  }
-
-  25% {
-    font-size:3rem;
-    color: rgb(251, 255, 0);
-  }
-
-  50% {
-    font-size: 2.5rem;
-    color: green;
-  }
-
-  75% {
-    font-size: 1.5rem;
-    color: blue;
+  transform: translate(0%) scale(var(--scale));
+    
   }
 
   to {
-    font-size: 1rem;
-    color: rgb(255, 0, 242);
+  transform: translate(100%) scale(var(--scale));
+   
   }
 }
