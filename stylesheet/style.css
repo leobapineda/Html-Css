@@ -1,15 +1,45 @@
-.div1 {
-  width: 100px;
-  color: white;
-  height: 100px;
-  background-color: red;
-  transition-property: all;
-  transition-duration: 1s;
-  transition-timing-function: ease-in;
-  transition-delay: 1s;
+body.js-stop-transition * {
+  transition: none !important;
 }
 
-.div1:hover {
-  color: black;
-  background-color: blue;
+body {
+  background-color: #0a192f;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  margin: 1rem auto;
+  background: none;
+  color: #64ffda;
+  border: 1px solid #64ffda;
+  padding: 1rem;
+  width: 400px;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.hide {
+  opacity: 0.5;
+  transition: opacity 0.5s;
+}
+
+.hide:hover {
+  opacity: 1;
+}
+
+.hide:focus {
+  opacity: 0;
+}
+
+.change {
+  transition-property: background-color, color;
+  transition-duration: 500ms;
+  transition-delay: 0.1s;
+}
+
+.change:focus {
+  color: #333;
+  background-color: hsl(20, 100%, 50%);
 }
