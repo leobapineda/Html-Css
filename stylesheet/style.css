@@ -1,42 +1,80 @@
-.div {
-  --scale: 1.5;
-  text-align: right;
-  justify-content: end;
-  width: 200px;
-  height: 200px;
-  background-color: red;
+:root{
+  --custom-w: 10px;
+  --custom-h: 10px;
+}
+
+body {
+  background-color: #0a192f;
+  --green-color: #64ffda;
   color: white;
-  animation-name: custom;
-  animation-delay: 0.5;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
+  margin: 1rem 5rem;
+  /* height: 200vh; */
+}
+
+.button__container {
+  display: flex;
+  height: 100px;
+  background-color: red;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.button {
+  font-size: 1rem;
+  background: none;
+  color: var(--green-color);
+  border: 1px solid var(--green-color);
+  padding: 0.5em 1em;
+  cursor: pointer;
+  border-radius: 0.2em;
+  /* position: fixed;
+  right: 10px; */
+}
+
+button::before {
+  content: "Let's Talk";
+}
+
+button:focus::before {
+  content: attr(data-text);
+}
+
+button:focus {
+  font-size: 1rem;
+  width: 4rem;
+  height: 4rem;
+  animation-name: example;
   animation-duration: 1s;
-  animation-timing-function: linear;
-  /* the first value is x and second one y */
-  /* transform: scale(1, 1); */
-  /* transform: rotate(170deg); */
-  /* transform: rotate(0.75turn); */
-  /* the first value is  from the x, the second from the y*/
-  /* transform: translate(100px, 200px); */
-  /* transform: translateX(100px) translateY(200px); */
-  /* we can use % to translate, but then the element will translate base on its own size, not the size of the parent*/
-  /* to translate it we can use %, px, rem, em */
-  /* transform: translate(100%); */
-
+  animation-fill-mode: forwards;
 }
 
-.div:hover {
-  animation-play-state: paused;
+@keyframes example {
+  
+  100% {
+    background-color: rgb(0, 213, 255);
+    border-radius: 50%;
+    transform: translate(var(--custom-w), var(--custom-h));
+    position: fixed;
+  }
 }
 
-@keyframes custom {
-  from {
-  transform: translate(0%) scale(var(--scale));
-    
-  }
+.test {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width:50%;
+  height: 100px;
+  background-color: yellow;
+  opacity: 0.6;
+}
 
-  to {
-  transform: translate(100%) scale(var(--scale));
-   
-  }
+.test2 {
+  position: fixed;
+  top: 100px;
+  right: 0px;
+  width:50%;
+  height: 100px;
+  background-color: orange;
+  opacity: 0.6;
 }
