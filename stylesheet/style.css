@@ -3,7 +3,10 @@
   color: white;
   height: 100px;
   background-color: red;
-  transition: all 1s ease-in 1s;
+  transition-property: all;
+  transition-duration: 1s;
+  transition-timing-function: ease-in;
+  transition-delay: 1s;
 }
 
 .div1:hover {
