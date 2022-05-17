@@ -1,15 +1,14 @@
 :root {
-  --mesage-btn-width: 100px;
+  --mesage-btn-width: 6rem;
 }
 
-body{
+body {
   font-size: 2rem;
   height: 200vh;
   margin: 0;
-
 }
 
-.div1__container{
+.div1__container {
   background-color: yellow;
   height: 100vh;
   width: 100%;
@@ -17,7 +16,6 @@ body{
   justify-content: center;
   align-items: flex-start;
   position: relative;
-
 }
 
 .div1 {
@@ -26,22 +24,26 @@ body{
   height: calc(var(--mesage-btn-width) / 2);
   color: white;
   position: absolute;
-  transition: all 1s ease-in-out;
-  right: calc(50% - (var(--mesage-btn-width)/2));
   bottom: 80%;
+  right: calc(50% - (var(--mesage-btn-width) / 2));
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0.4s;
 }
 
-.div1:focus{
+.div1:focus {
   background-color: green;
   color: black;
-  /* position: absolute; */
   position: fixed;
   right: 10px;
   bottom: 30px;
-
+  width: calc(var(--mesage-btn-width) / 2);
+  height: calc(var(--mesage-btn-width) / 2);
+  border-radius: 50%;
 }
 
-.span1{
+.span1 {
   width: 50%;
   background-color: red;
   position: fixed;
@@ -50,8 +52,7 @@ body{
   top: 0;
 }
 
-
-.span2{
+.span2 {
   width: 50%;
   background-color: rgb(0, 17, 255);
   position: fixed;
