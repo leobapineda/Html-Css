@@ -4,7 +4,7 @@ const nav = document.querySelector(".nav");
 let lastScrollY = window.scrollY;
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY >= 20) {
+  if (window.scrollY >= 50) {
     button.classList.add("button__down");
   }
 
@@ -20,3 +20,9 @@ window.addEventListener("scroll", () => {
   lastScrollY = window.scrollY;
   console.log( window.scrollY);
 });
+
+
+// necesito que te quedes ahi
+
+// tengo que hacer un div que cubra todo el primer vh
+// 
