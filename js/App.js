@@ -4,7 +4,7 @@ const nav = document.querySelector(".nav");
 let lastScrollY = window.scrollY;
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY >= 50) {
+  if (window.scrollY >= 125) {
     button.classList.add("button__down");
   }
 
