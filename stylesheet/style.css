@@ -68,7 +68,7 @@ body {
   top: 0;
   left: calc(50% - (var(--mesage-btn-width) / 2));
   transition-property: all;
-  transition-duration: 1s;
+  transition-duration: 0.5s;
   transition-timing-function: ease-out;
   border-radius: 0.4em;
   border: 1px solid var(--green-color);
