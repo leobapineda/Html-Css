@@ -20,9 +20,3 @@ window.addEventListener("scroll", () => {
   lastScrollY = window.scrollY;
   console.log( window.scrollY);
 });
-
-
-// necesito que te quedes ahi
-
-// tengo que hacer un div que cubra todo el primer vh
-// 
