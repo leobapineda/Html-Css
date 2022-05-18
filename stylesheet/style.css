@@ -1,62 +1,91 @@
 :root {
+  --background-color: #0a192f;
+  --green-color: #64ffda;
+  --custom-w: 0px;
+  --custom-h: 0px;
+  --nav-height: 50px;
+  --white-color: #e6f1ff;
   --mesage-btn-width: 6rem;
 }
 
-body {
-  font-size: 2rem;
-  height: 200vh;
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
-.div1__container {
-  background-color: yellow;
-  height: 200px;
+body {
+  background-color: #0a192f;
+  color: var(--white-color);
+  margin: 1rem 5rem;
+  height: 200vh;
+  padding-top: var(--nav-height);
+  font-size: 2rem;
+}
+
+.nav {
   width: 100%;
+  height: var(--nav-height);
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #64ffda90;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  /* position: relative; */
+  align-items: center;
+  justify-content: space-around;
+  transition: transform 0.2s;
 }
 
-.div1 {
-  background-color: red;
+.nav--hidden {
+  transform: translateY(calc(-1 * var(--nav-height)));
+}
+
+.nav__link {
+  color: var(--white-color);
+  text-decoration: none;
+  margin: 0 1em;
+  font-weight: bold;
+}
+
+.button__container {
+  background-color: rgba(201, 201, 201, 0.1);
+  width: 100%;
+  height: 80%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.button {
+  background: none;
   width: var(--mesage-btn-width);
   height: calc(var(--mesage-btn-width) / 2);
-  color: white;
+  color: var(--green-color);
   position: absolute;
-  bottom: 80%;
-  right: calc(50% - (var(--mesage-btn-width) / 2));
+  top: 0;
+  left: calc(50% - (var(--mesage-btn-width) / 2));
   transition-property: all;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-in-out;
-  transition-delay: 0.4s;
+  transition-duration: 1s;
+  transition-timing-function: ease-out;
+  border-radius: 0.4em;
+  border: 1px solid var(--green-color);
 }
 
-.div1:focus {
-  background-color: green;
-  color: black;
+.button.button__down {
   position: fixed;
-  right: 10px;
-  bottom: 30px;
+  left: calc(100% - 60px);
+  top: 90%;
   width: calc(var(--mesage-btn-width) / 2);
   height: calc(var(--mesage-btn-width) / 2);
   border-radius: 50%;
+  background-color: var(--green-color);
+  color: var(--background-color);
 }
 
-.span1 {
+.test {
   width: 50%;
-  background-color: red;
-  position: fixed;
-  /* z-index: 10; */
-  left: 0;
-  top: 0;
-}
-
-.span2 {
-  width: 50%;
-  background-color: rgb(0, 17, 255);
-  position: fixed;
-  /* z-index: 10; */
-  right: 0;
-  top: 0;
+  height: 180px;
 }
