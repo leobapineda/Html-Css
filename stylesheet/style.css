@@ -3,7 +3,7 @@
   --green-color: #64ffda;
   --custom-w: 0px;
   --custom-h: 0px;
-  --nav-height: 50px;
+  --nav-height: 30px;
   --white-color: #e6f1ff;
   --mesage-btn-width: 6rem;
 }
@@ -20,7 +20,7 @@ body {
   margin: 1rem 5rem;
   height: 200vh;
   padding-top: var(--nav-height);
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 .nav {
